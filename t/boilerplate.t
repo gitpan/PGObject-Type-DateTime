@@ -35,8 +35,8 @@ sub module_boilerplate_ok {
         'boilerplate description'     => qr/Quick summary of what the module/,
         'stub function definition'    => qr/function[12]/,
     );
+}
 
-  local $TODO = "Need to replace the boilerplate text";
 
   not_in_file_ok(README =>
     "The README is used..."       => qr/The README is used/,
@@ -46,7 +46,6 @@ sub module_boilerplate_ok {
   not_in_file_ok(Changes =>
     "placeholder date/time"       => qr(Date/time)
   );
-}
 
   module_boilerplate_ok('lib/PGObject/Type/DateTime.pm');
 
